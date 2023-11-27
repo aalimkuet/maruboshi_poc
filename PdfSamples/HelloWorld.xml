@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<catalog>
+  <cd>
+    <title>IronPDF</title>
+    <feature>Generate, format and manipulate PDFs</feature>
+    <compatible>Microsoft Windows, Linux (Debian, CentOS, Ubuntu), MacOS, Docker (Windows, Linux, Azure), Azure (VPS, Webapps, Websites, Functions), AWS</compatible>
+  </cd>
+  <cd>
+    <title>IronOCR</title>
+    <feature>OCR engine, input, result</feature>
+    <compatible>Microsoft Windows, Linux, MacOS, Docker, Azure, AWS</compatible>
+  </cd>
+  <cd>
+    <title>IronBarcode</title>
+    <feature>Format, read and write Barcode</feature>
+    <compatible>Microsoft Windows, Linux, MacOS, Docker, Azure, AWS</compatible>
+  </cd>
+</catalog>

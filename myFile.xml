@@ -1,0 +1,19 @@
+<rss version="2.0">
+  <channel>
+	<title>Sample RSS Feed</title>
+	<bighead>Your new content here</bighead>
+	<bighead>Your new content here</bighead>
+	  <link>http://www.example.com/rss</link>
+	<description>Sample RSS feed for demonstration</description>
+	<item>
+	  <title>Item 1 Title</title>
+	  <link>http://www.example.com/item1</link>
+	  <guid ispermalink="true">http://www.example.com/item1</guid>
+	</item>
+	<item>
+	  <title>Item 2 Title</title>
+	  <link>http://www.example.com/item2</link>
+	  <guid ispermalink="true">http://www.example.com/item2</guid>
+	</item>
+  </channel>
+</rss>
