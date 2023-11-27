@@ -138,7 +138,7 @@ internal class XmlParser
 
             File.WriteAllText(jsonFilePath, json);
 
-        }
+        }   
         catch (Exception ex)
         {
             Console.WriteLine("Error occurred: " + ex.Message);

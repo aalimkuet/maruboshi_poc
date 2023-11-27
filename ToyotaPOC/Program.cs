@@ -14,7 +14,7 @@ string filePath = "D:\\BS23\\Marobusho\\MaruboshiPOC\\myFile.xml";
 //XmlParsingXmlReader();
 //CreatePDFFromXmlWithAspose();
 
-var xmlParser = new XmlParser();
+var xmlParser = new XmlParser();  
 //xmlParser.GenerateXslFromModel();
 xmlParser.XmlToJson();
 //xmlParser.JsonToCSharpClass();
