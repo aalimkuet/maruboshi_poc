@@ -9,75 +9,19 @@ using System.Xml;
 
 string filePath = "D:\\BS23\\Marobusho\\MaruboshiPOC\\myFile.xml";
 
-//XcelParsingWithNpoi();
+var excelParser = new ExcelParser();
+
+excelParser.XcelParsingWithNpoi();
 //XmlParsingWithHtmlAgilityPack();
 //XmlParsingXmlReader();
 //CreatePDFFromXmlWithAspose();
 
-var xmlParser = new XmlParser();  
+var xmlParser = new XmlParser();
 //xmlParser.GenerateXslFromModel();
-xmlParser.XmlToJson();
+//xmlParser.XmlToJson();
 //xmlParser.JsonToCSharpClass();
+//xmlParser.XmlManupulation();
 
-
-void XcelParsingWithNpoi()
-{
-    string directoryPath = @"D:\BS23\Marobusho\MaruboshiPOC\MaruboshiPOC";
-
-    WriteFile(directoryPath);
-    ReadFile(directoryPath);
-}
-static void WriteFile(string directoryPath)
-{
-    string filePath = Path.Combine(directoryPath, "MyWorkBook.xlsx");
-
-    IWorkbook workBook = new XSSFWorkbook();
-    ISheet sheet = workBook.CreateSheet("Day01");
-    IRow row0 = sheet.CreateRow(0);
-    ICell cell0 = row0.CreateCell(0);
-    cell0.SetCellValue("First Cell");
-    cell0.SetAsActiveCell();
-    for (int i = 1; i <= 10; i++)
-    {
-        IRow row = sheet.CreateRow(i);
-        ICell cell = row.CreateCell(0); // Always create the cell in the first column (column 0).
-        cell.SetCellValue($"Hello {i}!");
-    }
-    using (FileStream fs = new FileStream(filePath, FileMode.Create))
-    {
-        workBook.Write(fs);
-    }
-    Console.WriteLine("Excel file created and data written to MyWorkBook.xlsx.");
-}
-
-static void ReadFile(string directoryPath)
-{
-    string filePath = Path.Combine(directoryPath, "MyWorkBook.xlsx");
-    List<string> cellValues = new List<string>();
-    using (FileStream file = new FileStream(filePath, FileMode.Open, FileAccess.Read))
-    {
-        IWorkbook workBook = new XSSFWorkbook(file);
-        ISheet sheet = workBook.GetSheetAt(0);
-        for (int i = 0; i <= sheet.LastRowNum; i++)
-        {
-            IRow row = sheet.GetRow(i);
-            if (row != null)
-            {
-                ICell cell = row.GetCell(0);
-                if (cell != null)
-                {
-                    cellValues.Add(cell.StringCellValue);
-                }
-            }
-        }
-    }
-
-    Console.WriteLine("Data read from Excel:");
-    foreach (var value in cellValues)
-    {
-        Console.WriteLine(value);
-    }
-}
 
 void XmlParsingWithHtmlAgilityPack()
 {
