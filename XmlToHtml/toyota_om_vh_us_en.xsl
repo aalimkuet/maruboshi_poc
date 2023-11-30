@@ -7,8 +7,15 @@
 		<html>
 			<head>
 				<link type="text/css" rel="stylesheet" href="./style.css" />
+				<script src="https://cdn.jsdelivr.net/npm/@simondmc/popup-js@1.4.2/popup.min.js"></script>
+				<script type="text/javascript" src="./script.js"></script>		
 			</head>
 			<body>
+
+			<div id="myElement">
+				<button id="myButton">Click me</button>
+			</div>
+
 				<h1>
 					<xsl:variable name="chapter" select="./book/chapter/section/@id" />
 					<xsl:variable name="substring" select="substring($chapter, 3, 2)" />
